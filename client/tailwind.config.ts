@@ -34,6 +34,7 @@ const config = {
 
     colors: {
       darkGray: "#333333",
+      lightGray: "#ECECE0",
     },
 
     extend: {
@@ -45,6 +46,7 @@ const config = {
         secondaryExraBold: ["BarlowExraBold"],
         secondaryBold: ["BarlowBold"],
         secondaryMedium: ["BarlowMedium"],
+        playfair: ["var(--font-playfair)", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
