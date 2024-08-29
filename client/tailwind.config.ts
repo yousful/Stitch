@@ -1,26 +1,50 @@
-import type { Config } from "tailwindcss"
-const { fontFamily } = require("tailwindcss/defaultTheme")
+import type { Config } from "tailwindcss";
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
       center: true,
       padding: "2rem",
       screens: {
+        sm: "320px",
+        // => @media (min-width: 320px) { ... }
+
+        md: "768px",
+        // => @media (min-width: 768px) { ... }
+
+        lg: "1024px",
+        // => @media (min-width: 1024px) { ... }
+
+        xl: "1280px",
+        // => @media (min-width: 1280px) { ... }
+
         "2xl": "1400px",
+        // => @media (min-width: 1400px) { ... }
       },
     },
+
+    colors: {
+      darkGray: "#333333",
+    },
+
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
+        primaryRegular: ["AudreyBold"],
+        primaryNormal: ["AudreyNormal"],
+        secondaryNormal: ["BarlowNormal"],
+        secondaryExraBold: ["BarlowExraBold"],
+        secondaryBold: ["BarlowBold"],
+        secondaryMedium: ["BarlowMedium"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -79,6 +103,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;
