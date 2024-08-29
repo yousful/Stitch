@@ -27,7 +27,7 @@ export const Hero = () => {
       </div>
       <div className='mt-[4rem]'>
         {" "}
-        {/* <Image alt='hero-image' src={"../"} /> */}
+        
         <Image
           width={490}
           height={386}
