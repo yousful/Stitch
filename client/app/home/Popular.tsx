@@ -1,11 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import Image from "next/image";
 
-import { BsCart3 } from "react-icons/bs";
-import { FaShoppingCart, FaHeart, FaCreditCard } from "react-icons/fa";
-import { FiHeart } from "react-icons/fi";
+import Image from "next/image";
 
 interface ProductCardProps {
   image: string;
