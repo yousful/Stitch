@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export const Hero = () => {
   return (
-    <main className='flex justify-around'>
+    <main className='flex justify-between'>
       <div className='flex flex-col gap-4 w-[609px]  h-[609px] mt-[3rem]'>
         <p className='leading-[50px] text-[36px] font-medium font-playfair w-[609px] h-[150px]'>
           Discover <span className='text-primary'>Fashion </span> That Fits You
@@ -27,7 +27,6 @@ export const Hero = () => {
       </div>
       <div className='mt-[4rem]'>
         {" "}
-        
         <Image
           width={490}
           height={386}
