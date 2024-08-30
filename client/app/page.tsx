@@ -5,7 +5,7 @@ import OurDiffernce from "./home/OurDiffernce";
 import Popular from "./home/Popular";
 function Home() {
   return (
-    <main className='min-h-screen h-full pl-[4rem] pr-[2.8rem]'>
+    <main className='min-h-screen h-full pl-[4rem] pr-[4.5rem]'>
       <Hero />
       <Review />
       <TopRated />
