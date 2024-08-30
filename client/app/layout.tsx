@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Inter as FontSans } from "next/font/google";
+import { Playfair_Display, Barlow } from "next/font/google";
 import { cn } from "@/lib/utils";
 import "./globals.css";
 import Header from "@/components/layouts/Header";
@@ -9,8 +10,18 @@ import Footer from "@/components/layouts/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 const fontSans = FontSans({
-	subsets: ["latin"],
-	variable: "--font-sans",
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
+
+// const barlow = Barlow({
+//   subsets: ["latin"],
+//   variable: "--font-barlow",
+// });
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
 });
 
 export const metadata: Metadata = {
@@ -19,23 +30,23 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-	children,
+  children,
 }: Readonly<{
-	children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-	return (
-		<html lang="en">
-			<body
-				className={cn(
-					"min-h-screen bg-background font-sans antialiased",
-					fontSans.variable
-				)}
-			>
-				<Header />
-				{children}
-				<Footer />
-			</body>
-		</html>
-	);
+  return (
+    <html lang='en'>
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable,
+          playfair.variable
+        )}
+      >
+        <Header />
+        {children}
+        <Footer />
+      </body>
+    </html>
+  );
 }
-

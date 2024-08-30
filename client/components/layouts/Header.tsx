@@ -1,9 +1,9 @@
-import { headerLinks } from '@/lib/constants'
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
-import { FiShoppingCart } from 'react-icons/fi'
-import { Button } from '../ui/button'
+import { headerLinks } from "@/lib/constants";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import { FiShoppingCart } from "react-icons/fi";
+import { Button } from "../ui/button";
 
 function Header() {
   return (
@@ -25,7 +25,7 @@ function Header() {
         </section>
          
     </nav>
-  )
+  );
 }
 
-export default Header
+export default Header;
