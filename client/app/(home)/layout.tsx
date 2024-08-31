@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import { Inter as FontSans } from "next/font/google";
 import { Playfair_Display, Barlow } from "next/font/google";
 import { cn } from "@/lib/utils";
-import "./globals.css";
+import "../globals.css";
 import Header from "@/components/layouts/Header";
 import Footer from "@/components/layouts/Footer";
 
