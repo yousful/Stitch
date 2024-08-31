@@ -67,3 +67,38 @@
     @apply bg-background text-foreground;
   }
 }
+
+@font-face {
+  font-family: "AudreyBold";
+  src: local("Audrey-Bold"),
+    url("../components/fonts/Audrey-Bold.otf") format("otf");
+}
+
+@font-face {
+  font-family: "AudreyNormal";
+  src: local("Audrey-Bold"),
+    url("../components/fonts/Audrey-Normal.otf") format("otf");
+}
+
+@font-face {
+  font-family: "BarlowNormal";
+  src: local("Barlow-Black"),
+    url("../components/fonts/Barlow-Black.otf") format("otf");
+}
+
+@font-face {
+  font-family: "BarlowExraBold";
+  src: local("Barlow-Extra Bold"),
+    url("../components/fonts/Barlow-Extra\ Bold.ttf") format("otf");
+}
+
+@font-face {
+  font-family: "BarlowBold";
+  src: local("Barlow-Bold"),
+    url("../components/fonts/Barlow-Bold.otf") format("otf");
+}
+@font-face {
+  font-family: "BarlowMedium";
+  src: local("Barlow-Medium"),
+    url("../components/fonts/Barlow-Medium.otf") format("otf");
+}
