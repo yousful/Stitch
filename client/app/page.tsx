@@ -4,6 +4,7 @@ import TopRated from "./home/TopRated";
 import OurDiffernce from "./home/OurDiffernce";
 import Popular from "./home/Popular";
 import News from "./home/News";
+import WhatClientSay from "./home/WhatClientSay";
 function Home() {
   return (
     <main className='min-h-screen h-full pl-[4rem] pr-[4.5rem]'>
@@ -13,6 +14,7 @@ function Home() {
       <OurDiffernce />
       <Popular />
       <News />
+      <WhatClientSay />
     </main>
   );
 }

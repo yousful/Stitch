@@ -3,12 +3,6 @@ import { Button } from "@/components/ui/button";
 
 import Image from "next/image";
 
-interface ProductCardProps {
-  image: string;
-  title: string;
-  price: string;
-}
-
 const Popular = () => {
   return (
     <main className='mt-[4rem]'>

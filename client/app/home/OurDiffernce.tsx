@@ -4,7 +4,8 @@ import Image from "next/image";
 const OurDiffernce = () => {
   return (
     <main className='mt-[6rem] w-11/12 m-auto flex flex-col  items-center gap-[5rem]'>
-      <h2 className='font-medium font-playfair leading-[16px] text-[36px]'>
+      {/* <h2 className='font-medium font-playfair leading-[16px] text-[36px]'> */}
+      <h2 className='font-playfair text-center font-extrabold leading-[61.45px] text-[48px] '>
         What Makes Us Different
       </h2>
       <section className='flex justify-around w-full'>
