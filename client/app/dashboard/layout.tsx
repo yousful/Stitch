@@ -6,6 +6,8 @@ import { cn } from "@/lib/utils";
 import "../globals.css";
 import Header from "@/components/layouts/Header";
 import Footer from "@/components/layouts/Footer";
+import DashboardHeader from "@/components/layouts/DashboardHeader";
+import DashboardSidebar from "@/components/layouts/DashboardSidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -43,10 +45,12 @@ export default function RootLayout({
           playfair.variable
         )}
       >
-        <Header />
+        <DashboardHeader />
         {children}
-        <Footer />
+        <DashboardSidebar />
       </body>
     </html>
   );
 }
+
+
