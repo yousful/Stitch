@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const Explore = () => {
   return (
-    <main className='mt-[4rem] flex justify-between'>
+    <main className='mt-[1rem] flex justify-between '>
       <div className='w-1/2'>
         <h2 className='font-sans text-[48px] leading-[60px] font-medium text-black mb-[1rem]'>
           {" "}
