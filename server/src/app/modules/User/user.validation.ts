@@ -9,6 +9,17 @@ const userValidationSchema = z.object({
     .max(20, { message: 'Password can not be more than 20 characters' })
     .optional(),
 })
+const userAddresValidationSchema = z.object({
+  body: z.object({
+    content: z.string(),
+    typeOfAddress: z.string(),
+  }),
+})
+const userMeasurementValidationSchema = z.object({
+  body: z.object({
+    url: z.string(),
+  }),
+})
 
 const changeStatusValidationSchema = z.object({
   body: z.object({
@@ -18,4 +29,6 @@ const changeStatusValidationSchema = z.object({
 export const UserValidation = {
   userValidationSchema,
   changeStatusValidationSchema,
+  userAddresValidationSchema,
+  userMeasurementValidationSchema,
 }

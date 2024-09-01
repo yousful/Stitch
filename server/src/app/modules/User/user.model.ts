@@ -36,13 +36,21 @@ const userSchema = new Schema<TUser, UserModel>(
     },
     role: {
       type: String,
-      enum: ['superAdmin', 'tailor', 'admin'],
-      default: 'tailor'
+      enum: ['superAdmin', 'tailor', 'admin', 'user'],
+      default: 'tailor',
     },
     status: {
       type: String,
       enum: UserStatus,
       default: 'in-progress',
+    },
+    userMeasurement: {
+      type: Schema.Types.ObjectId,
+      ref: 'Measurement',
+    },
+    store: {
+      type: Schema.Types.ObjectId,
+      ref: 'Store',
     },
     isDeleted: {
       type: Boolean,
@@ -53,7 +61,6 @@ const userSchema = new Schema<TUser, UserModel>(
     timestamps: true,
   },
 )
-
 
 userSchema.pre('save', async function (next) {
   const user = this // doc
@@ -96,10 +103,10 @@ userSchema.methods.createJwt = function () {
     id: this._id,
     role: this.role,
     iat: moment().unix(),
-    exp: moment().add(config.jwt_access_expires_in, "minutes").unix(),
-  };
+    exp: moment().add(config.jwt_access_expires_in, 'minutes').unix(),
+  }
 
-  return jwt.sign(payload, config.jwt_access_secret as string);
-};
+  return jwt.sign(payload, config.jwt_access_secret as string)
+}
 
 export const User = model<TUser, UserModel>('User', userSchema)

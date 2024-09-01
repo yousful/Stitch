@@ -2,7 +2,13 @@
 import { Model } from 'mongoose'
 import { USER_ROLE } from './user.constant'
 
-export interface TUser {
+import { Document } from 'mongoose'
+import { TUserMeasurement } from './userMeasurement.interface'
+import { TUserAddress } from './address.interface'
+import { TProduct } from '../Product/product.interface'
+import { ObjectId } from 'mongoose'
+
+export interface TUser extends Document {
   firstname: string
   lastname: string
   email: string
@@ -12,10 +18,20 @@ export interface TUser {
   role: 'superAdmin' | 'admin' | 'tailor'
   status: 'in-progress' | 'blocked'
   isDeleted: boolean
-  createJwt(): string;
+  addresses: TUserAddress[]
+  userMeasurement: ObjectId
+  store: ObjectId
+  createJwt(): string
 }
 
-export type RegisterReqBody = Omit<TUser, 'passwordChangedAt' | 'isDeleted' | 'needsPasswordChange' | 'role' |'status' | 'createJwt'>;
+export type RegisterReqBody = Omit<
+  TUser,
+  | 'passwordChangedAt'
+  | 'isDeleted'
+  | 'needsPasswordChange'
+  | 'status'
+  | 'createJwt'
+>
 
 export type LoginReqBody = {
   email: string
