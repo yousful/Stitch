@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import FilterSection from "./FilterSection";
-import { filterItems, product } from "@/lib/constants";
+import { filterItems, poducts, product } from "@/lib/constants";
 import RatingFilterSection from "./StarRating";
 import RangeFilterSection from "./RangeFilter";
 import ProductCard from "./ProductCard";
@@ -20,13 +20,14 @@ function ProductLayout() {
 			<div className="max-w-[1440px] w-full grid grid-cols-8 gap-10   mx-auto">
 				{/* Filter section */}
 				<div className="col-span-2 h-full  w-full px-4 flex flex-col gap-6 pt-4">
-					
-						<div className="flex justify-between items-center w-full">
-							<p className="font-bold text-primary">Filter</p>
+					<div className="flex justify-between items-center w-full">
+						<p className="font-bold text-primary">Filter</p>
 
-							<Button className="bg-accent rounded-full text-primary font-semibold px-6">Clear</Button>
-						</div>
-				
+						<Button className="bg-accent rounded-full text-primary font-semibold px-6">
+							Clear
+						</Button>
+					</div>
+
 					<div className="border border-gray-400 rounded-lg p-4 mt-4">
 						<FilterSection
 							title="Category"
@@ -75,16 +76,19 @@ function ProductLayout() {
 							/>
 						</div>
 					</div>
-					<div className="col-span-6 grid grid-cols-3 gap-10 h-full  w-full px-4  ">
-						{product.map((item, idx)=><ProductCard key={idx}
-							image={item.image}
-							title={item.title}
-							price={item.price}
-						/>)}
-            <div className="place-self-end">
-
-						<CustomPagination />
-            </div>
+					<div className="col-span-6 grid gap-10 h-full w-full px-4  ">
+						<div className="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+							{poducts.map((item, idx) => (
+								<ProductCard
+									key={idx}
+									
+									{...item}
+								/>
+							))}
+						</div>
+						<div className="place-self-end align-baseline">
+							<CustomPagination />
+						</div>
 					</div>
 				</aside>
 			</div>

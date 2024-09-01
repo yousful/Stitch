@@ -7,9 +7,6 @@ export default function Shop() {
     <main className="min-h-screen h-full w-full">
       <Hero />
       <ProductLayout />
-      
-       
-      
     </main>
   );
 }
