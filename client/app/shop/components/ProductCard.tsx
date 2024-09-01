@@ -1,5 +1,10 @@
+'use client'
+
+import { ProductData } from '@/lib/types';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+
 import React, { useState } from 'react';
 import { BsCart3 } from 'react-icons/bs';
 import { FaShoppingCart, FaHeart, FaCreditCard } from 'react-icons/fa';
@@ -11,23 +16,27 @@ interface ProductCardProps {
   price: string;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ image, title, price }) => {
+const ProductCard: React.FC<ProductData> = (props) => {
   const [isHovered, setIsHovered] = useState(false);
+
+  const {product, id} = props
+
+  const router = useRouter()
 
   return (
     <div
-      className="relative border border-gray-300 rounded-lg w-80 h-96 overflow-hidden"
+      className="relative border border-gray-300 rounded-lg h-full w-full max-w-80 max-h-96 overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Product Image */}
-      <Image src={image} alt={title} className="w-full h-60 object-cover" width={400} height={400} />
+      <Image src={product.image} alt={product.name} className="w-full h-60 object-cover" width={400} height={400} />
 
       {/* Product Details */}
       <div className="p-4 mt-2">
         <h3 className="text-sm text-gray-500">Crepe</h3>
-        <h2 className="text-lg font-semibold text-gray-800">{title}</h2>
-        <p className="text-gray-600 mt-1">{price}</p>
+        <h2 className="text-lg font-semibold text-gray-800">{product.name}</h2>
+        <p className="text-gray-600 mt-1">{product.price}</p>
       </div>
 
       {/* Overlay with Actions */}
@@ -37,7 +46,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ image, title, price }) => {
           <Actions className='h-10 w-10 px-0 py-0 flex items-center justify-center' handleClick={()=>console.log('hey')}>
           <BsCart3 size={24}/>
           </Actions>
-          <Actions handleClick={()=>console.log('hey')}>
+          <Actions handleClick={()=>router.push(`shop/${id}`)}>
           Buy Now
           </Actions>
           <Actions className='h-10 w-10 px-0 py-0 flex items-center justify-center' handleClick={()=>console.log('hey')}>
