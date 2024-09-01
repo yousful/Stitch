@@ -12,20 +12,6 @@ import Review from "./Review";
 import TopRated from "./TopRated";
 import WhatClientSay from "./WhatClientSay";
 
-// function Home() {
-//   return (
-//     <main className='min-h-screen h-full pl-[2rem]  pr-[2rem]'>
-//       <Hero />
-//       <Review />
-//       <TopRated />
-//       <OurDiffernce />
-//     </main>
-//   );
-// }
-
-// export default Home;
-
-// import Newsletter from "./home/Newsletter";
 function Home() {
   return (
     <main className='min-h-screen h-full pl-[4rem] pr-[4.5rem]'>
