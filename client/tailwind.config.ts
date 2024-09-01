@@ -32,11 +32,7 @@ const config = {
       },
     },
 
-    colors: {
-      darkGray: "#333333",
-      gray: "#8C8C8C",
-      lightGray: "#ECECE0",
-    },
+
 
     extend: {
       fontFamily: {
@@ -75,6 +71,10 @@ const config = {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
         },
+        text: {
+         DEFAULT: '#8F8F8F',
+         100: '#292929'
+        },
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
@@ -83,6 +83,13 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+
+        // Here are some new colors
+        //   darkGray: "#333333",
+      gray: "#8C8C8C",
+      lightGray: "#ECECE0",
+      white: "#FFFFFF",
+      black: "#000000",
       },
       borderRadius: {
         lg: "var(--radius)",

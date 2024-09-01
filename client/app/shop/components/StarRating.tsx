@@ -16,7 +16,7 @@ interface RatingItemProps {
   onChange: () => void;
 }
 
-const RatingItem: React.FC<RatingItemProps> = ({ value, label, count, checked, onChange }) => {
+export const RatingItem: React.FC<RatingItemProps> = ({ value, label, count, checked, onChange }) => {
   return (
     <div className="flex items-center mb-2">
       <input

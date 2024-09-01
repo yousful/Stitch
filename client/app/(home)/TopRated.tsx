@@ -12,7 +12,7 @@ import {
 
 const TopRated = () => {
   return (
-    <main className=' mt-[4rem] w-11/12 m-auto '>
+    <main className=' mt-[4rem]  m-auto '>
       <section className='w-full flex justify-between  items-center'>
         <p className='font-playfair font-medium leading-[16px] text-[20px]'>
           {" "}
