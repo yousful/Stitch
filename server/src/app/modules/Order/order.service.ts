@@ -141,7 +141,7 @@ const getAllMyTransactions = async (userId: any) => {
   if (user.role === 'tailor') {
     throw new AppError(
       httpStatus.FORBIDDEN,
-      'Only ordinary user can use tgis route!!!',
+      'Only ordinary user can use this route!!!',
     )
   }
   return Transaction.find({ buyer: userId }).populate('order').exec()
