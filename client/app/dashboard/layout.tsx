@@ -37,11 +37,12 @@ export default function RootLayout({
 }>) {
 
 
+
   return (
     <html lang='en'>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          // "min-h-screen bg-background font-sans antialiased",
           barlow.className,
           playfair.className
         )}

@@ -4,15 +4,19 @@ import React, { createContext, useContext, useState } from 'react';
 type DashboardContextType = {
   currentTitle: string;
   setCurrentTitle: (title: string) => void;
+  isSidebarOpen: boolean;
+  setSidebarOpen: (open: boolean) => void;
 };
 
 const DashboardContext = createContext<DashboardContextType | undefined>(undefined);
 
 export const DashboardProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [currentTitle, setCurrentTitle] = useState('Dashboard');
+  const [currentTitle, setCurrentTitle] = useState('Dashboard'); 
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+
 
   return (
-    <DashboardContext.Provider value={{ currentTitle, setCurrentTitle }}>
+    <DashboardContext.Provider value={{ currentTitle, setCurrentTitle, isSidebarOpen, setSidebarOpen }}>
       {children}
     </DashboardContext.Provider>
   );
