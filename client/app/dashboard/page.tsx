@@ -44,7 +44,7 @@ const Dashboard: React.FC = () => {
   const pieChartColors = ['#235c4b', '#2a7a67', '#36a68a', '#5dc0a8', '#a5d8a7'];
 
   return (
-    <div className="pr-7 space-y-8 py-6">
+    <div className="pr-10 space-y-8 py-6">
       {/* Welcome Message */}
       <section className="bg-accent p-6 rounded-lg">
         <h2 className="text-2xl font-semibold text-primary">Welcome back, Grace!</h2>
@@ -80,13 +80,13 @@ const Dashboard: React.FC = () => {
       </section>
 
       {/* Chart Section */}
-      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+      <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <Card className="col-span-1">
           <CardHeader className="">
             <CardTitle className="text-md font-medium">Sales Trend</CardTitle>
           </CardHeader>
           <CardContent className="">
-            <LineChart width={500} height={300} data={lineChartData}>
+            <LineChart width={400} height={300} data={lineChartData}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="month" />
               <YAxis />
@@ -108,7 +108,7 @@ const Dashboard: React.FC = () => {
             <CardTitle className="text-md font-medium">Sales by Category</CardTitle>
           </CardHeader>
           <CardContent className="">
-            <PieChart width={500} height={300}>
+            <PieChart width={300} height={300}>
               <Pie
                 data={pieChartData}
                 dataKey="value"
