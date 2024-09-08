@@ -24,7 +24,7 @@ function SignUp() {
           placeholder: 'Enter your first name',
           control: control,
           rules: { required: 'First name is required' },
-          error: errors.firstName,
+        //   error: errors.firstName,
         },
         {
           type: 'input',
@@ -33,7 +33,7 @@ function SignUp() {
           placeholder: 'Enter your last name',
           control: control,
           rules: { required: 'Last name is required' },
-          error: errors.lastName,
+        //   error: errors.lastName,
         },
         {
           type: 'input',
@@ -42,7 +42,7 @@ function SignUp() {
           placeholder: 'Enter your email',
           control: control,
           rules: { required: 'Last name is required' },
-          error: errors.lastName,
+        //   error: errors.lastName,
         },
         {
           type: 'input',
@@ -51,7 +51,7 @@ function SignUp() {
           placeholder: 'Enter your email',
           control: control,
           rules: { required: 'Last name is required' },
-          error: errors.lastName,
+        //   error: errors.lastName,
         },
         {
           type: 'input',
@@ -60,7 +60,7 @@ function SignUp() {
           placeholder: 'Enter your email',
           control: control,
           rules: { required: 'Last name is required' },
-          error: errors.lastName,
+        //   error: errors.lastName,
         },
         {
           type: 'input',
@@ -69,7 +69,7 @@ function SignUp() {
           placeholder: 'Enter your email',
           control: control,
           rules: { required: 'Last name is required' },
-          error: errors.lastName,
+        //   error: errors.lastName,
         },
        
        
