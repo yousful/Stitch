@@ -1,3 +1,10 @@
+import { CustomInputProps } from '@/components/forminputs/CustomInput';
+import { CustomSelectInputProps } from '@/components/forminputs/CustomSelectInput';
+import { CustomTextAreaProps } from '@/components/forminputs/CustomTextArea';
+import { Control, FieldValues, FieldError, RegisterOptions } from 'react-hook-form';
+
+
+
 // Types for the product structure
 interface ProductImage {
     src: string;
@@ -57,4 +64,59 @@ interface ProductImage {
     reviews: Reviews;
     relatedProducts: RelatedProduct[];
   }
+
+
+  
+
+  export type FormBuilderProps = 
+  | ({ type: 'input'; } & CustomInputProps & CommonProps)
+  | ({ type: 'select'; } & CustomSelectInputProps & CommonProps)
+  | ({ type: 'textarea'; } & CustomTextAreaProps & CommonProps);
+
+interface CommonProps {
+  control?: Control<FieldValues>; // The control object from react-hook-form
+  name: string; // The name of the field
+  rules?: RegisterOptions; // Validation rules
+  error?: FieldError | undefined; // Error object for the field
+}
+
+
+
+
+
+
+
+export type FormField = 
+  | {
+      type: 'input';
+      name: string;
+      label: string;
+      placeholder?: string;
+      control: Control<FieldValues>;
+      rules?: { required: string; maxLength?: number };
+      error?: FieldError;
+    }
+  | {
+      type: 'select';
+      name: string;
+      label: string;
+      placeholder?: string;
+      options: { value: string; label: string }[];
+      control: Control<FieldValues>;
+      rules?: { required: string };
+      error?: FieldError;
+    }
+  | {
+      type: 'textarea';
+      name: string;
+      label: string;
+      placeholder?: string;
+      control: Control<FieldValues>;
+      rules?: { required: string; maxLength?: number };
+      error?: FieldError;
+    };
+
+
+
+
   
