@@ -36,16 +36,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <body
         className={cn(
-          "min-h-screen  font-sans antialiased bg-accent",
+          "min-h-screen  font-sans antialiased bg-background",
           fontSans.variable,
           playfair.variable
         )}
       >
         <Header />
+
         {children}
+
         <Footer />
       </body>
     </html>

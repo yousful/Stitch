@@ -32,8 +32,6 @@ const config = {
       },
     },
 
-
-
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
@@ -72,8 +70,8 @@ const config = {
           foreground: "hsl(var(--accent-foreground))",
         },
         text: {
-         DEFAULT: '#8F8F8F',
-         100: '#292929'
+          DEFAULT: "#8F8F8F",
+          100: "#292929",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -86,10 +84,10 @@ const config = {
 
         // Here are some new colors
         //   darkGray: "#333333",
-      gray: "#8C8C8C",
-      lightGray: "#ECECE0",
-      white: "#FFFFFF",
-      black: "#000000",
+        gray: "#8C8C8C",
+        lightGray: "#ECECE0",
+        white: "#FFFFFF",
+        black: "#000000",
       },
       borderRadius: {
         lg: "var(--radius)",

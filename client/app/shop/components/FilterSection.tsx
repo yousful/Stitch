@@ -1,5 +1,5 @@
-'use client'
-import React, { useState } from 'react';
+"use client";
+import React, { useState } from "react";
 
 interface FilterOption {
   label: string;
@@ -13,7 +13,12 @@ interface FilterItemProps {
   onChange: () => void;
 }
 
-const FilterItem: React.FC<FilterItemProps> = ({ label, count, checked, onChange }) => {
+const FilterItem: React.FC<FilterItemProps> = ({
+  label,
+  count,
+  checked,
+  onChange,
+}) => {
   return (
     <div className="flex items-center mb-2">
       <input

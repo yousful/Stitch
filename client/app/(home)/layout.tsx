@@ -25,8 +25,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-	title: "Stitch App",
-	description: "Stitch App is an online market place for fashion designers, to list their products and get hired",
+  title: "Stitch App",
+  description:
+    "Stitch App is an online market place for fashion designers, to list their products and get hired",
 };
 
 export default function RootLayout({
@@ -35,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
@@ -44,6 +45,7 @@ export default function RootLayout({
         )}
       >
         <Header />
+
         {children}
         <Footer />
       </body>
